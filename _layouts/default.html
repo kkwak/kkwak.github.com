@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title> &raquo; {{ page.title }}</title>
+   <meta name="author" content="Kenneth Kwak" />
+   <link rel="stylesheet" href="/css/reset.css" type="text/css" media="screen, projection" />
+   <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+   <link rel="stylesheet" href="/css/960.css" type="text/css" media="screen, projection" />
+</head>
+<body>
+	<div class="container_12">
+    <div class="grid_10 title">
+		<h1><a href="/">complex -> simple -> useless</a></h1>
+    </div>
+    <div class="grid_2 info">
+      <div class="extra">Kenneth Kwak</div>
+    </div>
+    <div class="grid_12 main">
+      {{ content }}
+    </div> 
+    <div class="grid_3 links">
+      <h3 id="green">.net</h3>
+      {% for post in site.categories.dotnet %}
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      {% endfor %}
+    </div>
+    <div class="grid_3 links">
+      <h3 id="yellow">javascript</h3>
+      {% for post in site.categories.javascript %}
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      {% endfor %}
+    </div>
+    <div class="grid_3 links">
+      <h3 id="red">work</h3>
+      {% for post in site.categories.work %}
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      {% endfor %}
+    </div>
+    <div class="grid_3 links">
+      <h3 id="blue">general</h3>
+      {% for post in site.categories.general %}
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      {% endfor %}
+    </div>
+    <div class="grid_12 footer">
+      <div class="footer_links">
+        <a href="/about.html">about</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
